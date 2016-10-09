@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <catalog>
+            <children>
+                <recommend module="oleksandr" >
+                    <sort_order>100</sort_order>
+                    <title>Manage Custom Table</title>
+                    <action>adminhtml/custom/index</action>
+                </recommend>
+            </children>
+        </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <configuration_section>
+                                        <title>Configuration</title>
+                                    </configuration_section>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

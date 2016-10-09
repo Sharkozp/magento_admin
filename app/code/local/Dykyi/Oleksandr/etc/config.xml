@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Dykyi_Oleksandr>
+            <version>1.0.0</version>
+        </Dykyi_Oleksandr>
+    </modules>
+    <global>
+
+        <blocks>
+            <oleksandr>
+                <class>Dykyi_Oleksandr_Block</class>
+            </oleksandr>
+        </blocks>
+
+        <helpers>
+            <oleksandr>
+                <class>Dykyi_Oleksandr_Helper</class>
+            </oleksandr>
+        </helpers>
+
+        <models>
+            <oleksandr>
+                <class>Dykyi_Oleksandr_Model</class>
+                <resourceModel>oleksandr_resource</resourceModel>
+            </oleksandr>
+
+            <oleksandr_resource>
+                <class>Dykyi_Oleksandr_Model_Resource</class>
+                <entities>
+                    <resource_table>
+                        <table>custom_table</table>
+                    </resource_table>
+                </entities>
+            </oleksandr_resource>
+        </models>
+
+        <resources>
+            <oleksandr_setup>
+                <setup>
+                    <module>Dykyi_Oleksandr</module>
+                </setup>
+            </oleksandr_setup>
+        </resources>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Dykyi_Oleksandr after="Mage_Adminhtml">Dykyi_Oleksandr</Dykyi_Oleksandr>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
